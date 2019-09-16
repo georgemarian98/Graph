@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1560730191 source:d:\proiecte\curbe\main.cpp
+	"Functii.h"
+
+1525727835 source:d:\proiecte\curbe\functii.cpp
+	"Functii.h"
+
+1523305329 d:\proiecte\curbe\functii.h
+	<SFML/Graphics.hpp>
+	<iostream>
+	<math.h>
+	<string.h>
+	<time.h>
+	<stdlib.h>
+	"Arbore.h"
+	"Preordine.h"
+
+1525727835 source:d:\proiecte\curbe\preordine.cpp
+	"Preordine.h"
+	<iostream>
+
+1524518741 d:\proiecte\curbe\preordine.h
+	<string.h>
+
+1524519676 source:d:\proiecte\curbe\arbore.cpp
+	"arbore.h"
+
+1523308323 d:\proiecte\curbe\arbore.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+
