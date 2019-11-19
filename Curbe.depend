@@ -31,3 +31,37 @@
 	<string.h>
 	<math.h>
 
+1574169052 source:d:\proiecte\graph\arbore.cpp
+	"arbore.h"
+
+1574169052 d:\proiecte\graph\arbore.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+
+1574169408 source:d:\proiecte\graph\functii.cpp
+	"Functii.h"
+	<stdio.h>
+
+1574169052 d:\proiecte\graph\functii.h
+	<SFML/Graphics.hpp>
+	<iostream>
+	<math.h>
+	<string.h>
+	<time.h>
+	<stdlib.h>
+	"Arbore.h"
+	"Preordine.h"
+
+1574169052 d:\proiecte\graph\preordine.h
+	<string.h>
+
+1574169690 source:d:\proiecte\graph\main.cpp
+	"Functii.h"
+
+1574169340 source:d:\proiecte\graph\preordine.cpp
+	"Preordine.h"
+	<iostream>
+	<bits/stdc++.h>
+

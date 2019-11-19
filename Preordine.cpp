@@ -1,16 +1,21 @@
 #include"Preordine.h"
 #include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
+
 int top=-1;
-char stack[MAX];
+char Cstack[MAX];
 
 void infixtoprefix(char infix[20],char prefix[20])
 {
     int i,j=0;
     int n=strlen(infix);
     char symbol;
-    stack[++top]='#';
-    strrev(infix);
+    Cstack[++top]='#';
+
+    std::string aux = infix;
+    reverse(aux.begin(), aux.end());
+    strcpy(infix, aux.c_str());
 
     for (i=0; i<n; i++)
     {
@@ -28,7 +33,7 @@ void infixtoprefix(char infix[20],char prefix[20])
             }
             else if(symbol == '(')
             {
-                while (stack[top]!=')')
+                while (Cstack[top]!=')')
                 {
                     prefix[j]=pop();
                     j++;
@@ -37,13 +42,13 @@ void infixtoprefix(char infix[20],char prefix[20])
             }
             else
             {
-                if (prcd(stack[top])<=prcd(symbol))
+                if (prcd(Cstack[top])<=prcd(symbol))
                 {
                     push(symbol);
                 }
                 else
                 {
-                    while(prcd(stack[top])>=prcd(symbol))
+                    while(prcd(Cstack[top])>=prcd(symbol))
                     {
                         prefix[j]=pop();
                         j++;
@@ -54,7 +59,7 @@ void infixtoprefix(char infix[20],char prefix[20])
         }
     }
 
-    while (stack[top]!='#')
+    while (Cstack[top]!='#')
     {
         prefix[j]=pop();
         j++;
@@ -65,7 +70,7 @@ void infixtoprefix(char infix[20],char prefix[20])
 char pop()
 {
     char a;
-    a=stack[top];
+    a=Cstack[top];
     top--;
     return a;
 }
@@ -73,7 +78,7 @@ char pop()
 void push(char symbol)
 {
     top++;
-    stack[top]=symbol;
+    Cstack[top]=symbol;
 }
 
 int prcd(char symbol) // returns the value that helps in the precedence

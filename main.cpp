@@ -2,14 +2,14 @@
 
 int main()
 {
-    cout<<R"(Intructiuni:
-Se introduce o expresie sub forma 'operand operatie operand'.
-Programul functioneaza pentru urmatoarele functii:
-    sinus (s)
-    cosinus (c)
-    logaritm natural (l)
-    ridicarea la putere (^)
-Exemplu:
+    cout<<R"(Instructions:
+You type the expression using the format 'operand operation operand'.
+The program can draw the following functions:
+    sine (s)
+    cosine (c)
+    natural logarithm (l)
+    power (^)
+Examples:
     2*x^2-x+5
     s(x^2)
     1/(l(s(x))+x))" <<endl;
@@ -17,7 +17,7 @@ Exemplu:
     srand(time(NULL));
 
     int c=1;
-    cout<<"Ecuatia "<<c++<<": ";
+    cout<<"expression: "<<c++<<": ";
     char s[100];
 
 
@@ -53,8 +53,6 @@ Exemplu:
         sf::Vertex(sf::Vector2f(w, h/2))
     };
 
-    bool inGrafic=false;
-
     while (window.isOpen())
     {
 
@@ -65,26 +63,8 @@ Exemplu:
                 window.close();
         }
 
-        if(peGrafic(punct.getPosition().x,punct.getPosition().y))
-            inGrafic=true;
-
-        ///traseaza graficul altei functii
-//        if(!peGrafic(punct.getPosition().x,punct.getPosition().y) && inGrafic){
-//            cout<<"Ecuatia "<<c++<<": ";
-//
-//            inGrafic=false;
-//            for(int i=0;i<n;i++)
-//                delete []polinom[i];
-//
-//            ecuatieNoua(polinom,n,s,grad,indice,ratie,poz);
-//
-//            culoare.r=rand()%230+10;
-//            culoare.g=rand()%230+10;
-//            culoare.b=rand()%230+10;
-//
-//            punct.setFillColor(culoare);
-//        }
-
+//        if(peGrafic(punct.getPosition().x,punct.getPosition().y))
+//            inGrafic=true;
 
 
         punct.setPosition(5*indice+w/2,-10*eval(root,indice)+h/2);

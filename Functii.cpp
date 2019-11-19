@@ -132,7 +132,11 @@ void ecuatieNoua(char *s)
     cin.getline(s,100);
     char prefix[20];
     infixtoprefix(s,prefix);
-    strrev(prefix);
+
+    std::string aux = prefix;
+    reverse(aux.begin(), aux.end());
+    strcpy(prefix, aux.c_str());
+
     strcpy(s,prefix);
 //    ratie=0.1/grad;
 //    indice=(-50+10*grad>=0)?-5:-50+10*grad;
