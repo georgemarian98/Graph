@@ -5,7 +5,7 @@ The application draws the graph of a mathematical function given by the user. It
 # Installation
 
 For compilation I used SFML 2.5.1. You must link the library if you want to recompile the project( more on how you can do it [SFML](https://www.sfml-dev.org/index.php)).
-After compilation you must copy the sfml-graphics-2.dll, sfml-window-2.dll, sfml-system-2.dll in the output files to work properly.
+After compilation you must copy the `sfml-graphics-2.dll, sfml-window-2.dll, sfml-system-2.dll` in the output files to work properly.
 
 # Usage
 
